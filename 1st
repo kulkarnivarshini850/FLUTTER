@@ -1,0 +1,79 @@
+Here’s a simple HTML page you can copy into a file named index.html and open in a browser:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 30px;
+        }
+
+        main {
+            padding: 50px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <p>A simple HTML, CSS and JavaScript example</p>
+    </header>
+
+    <main>
+        <h2>Hello World! 👋</h2>
+        <p>Click the button below.</p>
+
+        <button onclick="sayHello()">Click Me</button>
+
+        <p id="message"></p>
+    </main>
+
+    <footer>
+        © 2026 My Website
+    </footer>
+
+    <script>
+        function sayHello() {
+            document.getElementById("message").textContent =
+                "Hello! You clicked the button 🎉";
+        }
+    </script>
+
+</body>
+</html>
