@@ -1,0 +1,99 @@
+Absolutely — here’s another simple one, this time a color-changing card:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4f46e5;
+        }
+
+        #colorName {
+            font-weight: bold;
+            color: #667eea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>🎨 Color Changer</h1>
+
+        <p>
+            Current color:
+            <span id="colorName">Blue</span>
+        </p>
+
+        <button onclick="changeColor()">
+            Change Color
+        </button>
+    </div>
+
+    <script>
+        function changeColor() {
+
+            const colors = [
+                ["#ff6b6b", "Red"],
+                ["#4ecdc4", "Turquoise"],
+                ["#45b7d1", "Sky Blue"],
+                ["#96ceb4", "Green"],
+                ["#feca57", "Yellow"],
+                ["#a29bfe", "Purple"]
+            ];
+
+            const random =
+                colors[Math.floor(Math.random() * colors.length)];
+
+            document.body.style.background =
+                random[0];
+
+            document.getElementById("colorName")
+                .textContent = random[1];
+        }
+    </script>
+
+</body>
+</html>
